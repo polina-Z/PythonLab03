@@ -11,11 +11,6 @@
                       <a href="#task">Task</a>
                  </h3>
              </div>
-             <div class="2u 12u(3)">
-                 <h3>
-                     <a href="#history">History</a>
-                 </h3>
-             </div>
           </div>
           <hr/>
           <form method="post">
@@ -25,45 +20,19 @@
                 {{ message }}
             </div>
             {% endfor %}
-
-              {% for field in form %}
-                  <p style="color: white">
+            {% for field in form %}
+                <p style="color: white">
                     {{ field.label_tag }}<br>
                     {{ field }}<br>
-                  </p>
-                {% endfor %}
-                  <div class="12u$">
-                        <ul class="actions">
-                            <li>
-                              <input type="submit" value="Save" class="special"></li>
-                        </ul>
-                  </div>
-              </form>
-
-<!--              <section id="history" class="wrapper">-->
-<!--                  <h4>History</h4>-->
-<!--                  <h5>Created by {{ task_creator }} </h5>-->
-<!--                  <div class="table-wrapper">-->
-<!--                          <table>-->
-<!--                              <thead>-->
-<!--                              <tr>-->
-<!--                                  <th>Time</th>-->
-<!--                                  <th>Record</th>-->
-<!--                                  <th></th>-->
-<!--                              </tr>-->
-<!--                          </thead>-->
-<!--                          <tbody>-->
-<!--                          {% for record in history %}-->
-<!--                             <tr>-->
-<!--                              <td>{{ record.time }}</td>-->
-<!--                              <td>{{ record.message }}</td>-->
-<!--                              </tr>-->
-<!--                          {% endfor %}-->
-<!--                          </tbody>-->
-<!--                          </table>-->
-<!--                  </div>-->
-<!--              </section>-->
-         </div>
+                </p>
+            {% endfor %}
+            <div class="12u$">
+                <ul class="actions">
+                    <li>
+                    <input type="submit" value="Save" class="special"></li>
+                </ul>
+            </div>
+          </form>
         </div>
     </div>
 </section>
